@@ -9,13 +9,15 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { FilterPipe } from './pipes/filter/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import {ModalModule} from 'ngx-bootstrap/modal';
+import { BarchartComponent } from './barchart/barchart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     DashboardPageComponent,
-    FilterPipe
+    FilterPipe,
+    BarchartComponent,
   ],
   imports: [
     BrowserModule,

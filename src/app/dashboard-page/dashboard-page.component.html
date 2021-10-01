@@ -5,13 +5,15 @@
             <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search Text">
         </div>
     </div>
+  <div>
+  </div>
     <div class="row mx-n0 search-items-container">
-        <div class="col-md-4 col-lg-3 col=sm-6 mb-3" *ngFor="let state of usStates | filter : searchText : 'name'">
+        <div class="col-md-6 col-lg-4 col-sm-6 mb-3" *ngFor="let state of usStates | filter : searchText : 'name'">
             <div class="card" (click)="moreDetails=state;moreDetailModalRef.show();">
                 <div class="card-body">
                     <h5 class="card-title">{{state.name}}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <app-barchart *ngIf="chartData" [data]="chartData"></app-barchart>
                 </div>
             </div>
         </div>
